@@ -1,8 +1,10 @@
-node {
-  stage('SCM Checkout') {
-    git 'https://github.com/mikered0/Jenkins'
-  }
-  stage('Compile-Package') {
-    sh 'mvn package'  
-  }
+pipeline { 
+    agent any  
+    stages { 
+        stage('Build') { 
+            steps { 
+               echo 'This is a minimal pipeline.' 
+            }
+        }
+    }
 }
